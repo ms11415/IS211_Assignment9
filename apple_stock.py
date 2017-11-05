@@ -11,10 +11,9 @@ response = urllib2.urlopen("https://finance.yahoo.com/quote/AAPL/history?p=AAPL"
 webpage = response.read()
 # creates BeautifulSoup object
 soup = BeautifulSoup(webpage, "lxml")
-# searches for table where player data resides
+# searches for table where stock data resides
 table = soup.find("table", {"data-test": "historical-prices"})
-
-# searches for rows where player data resides
+# searches for rows where stock data resides
 rows = table.findAll("tr")
 # prints header to identify output
 print "-" * 80
