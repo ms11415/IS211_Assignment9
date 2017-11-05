@@ -26,8 +26,6 @@ print "Day - High Temp - Average Temp - Low Temp"
 print "-" * 80
 # processes rows to output requested data
 for row in rows:
-    # print row
-    # print "-" * 20
     day = row.find("td")
     high = row.find("span")
     average = high.findNext("span")
