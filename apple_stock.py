@@ -10,7 +10,7 @@ response = urllib2.urlopen("https://finance.yahoo.com/quote/AAPL/history?p=AAPL"
 # reads URL data
 webpage = response.read()
 # creates BeautifulSoup object
-soup = BeautifulSoup(webpage, "lxml")
+soup = BeautifulSoup(webpage, "html.parser")
 # searches for table where stock data resides
 table = soup.find("table", {"data-test": "historical-prices"})
 # searches for rows where stock data resides

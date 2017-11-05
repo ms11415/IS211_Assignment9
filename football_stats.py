@@ -11,7 +11,7 @@ response = urllib2.urlopen(
 # reads URL data
 webpage = response.read()
 # creates BeautifulSoup object
-soup = BeautifulSoup(webpage, "lxml")
+soup = BeautifulSoup(webpage, "html.parser")
 # searches for table where player data resides
 table = soup.find("table", {"class": "data"})
 # searches for rows where player data resides
